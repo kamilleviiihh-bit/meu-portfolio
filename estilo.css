@@ -1,0 +1,22 @@
+/* css externo */
+
+body {
+    /* hexadecimal */
+    background: #c6e2fa;
+    /* cor de fundo */
+    color: rgb(3, 3, 75);
+    /* cor de texto  */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+a {
+    color: rgb(3, 3, 75);
+    text-decoration: none;
+}
+
+
+ul {
+    list-style: none;
+    /* estilo de lista */
+}
