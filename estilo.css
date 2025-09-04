@@ -1,22 +1,114 @@
 /* css externo */
 
+/* definir as cores tema dark */
+/* raiz */
+:root,
+:root[data-theme='dark'] {
+    --cor-fundo: rgb(70, 78, 139);
+    --cor-texto: rgb(248, 225, 233);
+    --cor-borda: rgb(204, 198, 255);
+    --menu-link: rgb(253, 229, 248);
+    --cor-cabeçalho: rgb(184, 184, 255);
+}
+
+:root[data-theme='light'] {
+    --cor-fundo: rgb(245, 233, 237);
+    --cor-texto: rgb(143, 143, 212);
+    --cor-borda: rgb(149, 141, 223);
+    --menu-link: rgb(53, 45, 75);
+    --cor-cabeçalho: rgb(184, 184, 250);
+
+}
+
+
+
 body {
     /* hexadecimal */
-    background: #c6e2fa;
+    background: var(--cor-fundo);
     /* cor de fundo */
-    color: rgb(3, 3, 75);
+    color: var(--cor-texto);
     /* cor de texto  */
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-
 a {
-    color: rgb(3, 3, 75);
+    color: var(--menu-link);
     text-decoration: none;
 }
-
 
 ul {
     list-style: none;
     /* estilo de lista */
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background-color: var(--cor-cabeçalho);
+    border-bottom: 5px solid var(--cor-borda);
+}
+
+.menu-desktop {
+    background-color: rgb(184, 184, 250);
+    display: none;
+    /* esconde o menu desktop */
+}
+
+/* nav ou ul */
+.menu {
+    display: flex;
+    /* em linha */
+    /* horizontal */
+    gap: 1rem;
+    /* 16px */
+    align-items: center;
+}
+
+.menu-item {
+    width: 100%;
+}
+
+.menu-link {
+    display: flex;
+    align-items: center;
+}
+
+.menu-text {
+    color: var(--cor-texto);
+    font-size: 0.9rem;
+    text-transform: lowercase;
+}
+
+/* menu hamburger */
+
+#menuHamburger {
+    margin-left: 1rem;
+}
+
+.btn-menu-mobile {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    color: var(--cor-texto);
+    display: flex;
+    font-size: 1rem;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem;
+}
+
+/* medidas responsivas */
+
+@media(min-width: 768px) {
+    .menu-desktop {
+        display: flex;
+
+    }
+
+    .btn-menu-mobile {
+        display: none;
+    }
+
 }
