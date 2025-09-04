@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-br" data-theme="dark">
 
 <head>
     <meta charset="UTF-8">
@@ -15,32 +15,35 @@
 <body>
 
     <header> <!-- cabeçalho -->
-        <nav> <!-- navegador -->
-            <ul>
-                <li>
-                    <a href="">
-                        <span>
+        <nav class="menu-desktop"> <!-- menu desktop -->
+            <ul class="menu menu-principal">
+                <li class="menu-item">
+                    <a href="" class="menu-link">
+                        <span class="menu-text">
                             home
                         </span>
                     </a>
                 </li> <!-- lista -->
-                <li>
-                    <a href="">
-                        <span>
+
+                <li class="menu-item">
+                    <a href="" class="menu-link">
+                        <span class="menu-text">
                             projetos
                         </span>
                     </a>
                 </li>
-                <li>
-                    <a href="">
-                        <span>
+
+                <li class="menu-item">
+                    <a href="" class="menu-link">
+                        <span class="menu-text">
                             sobre
                         </span>
                     </a>
                 </li>
-                <li>
-                    <a href="">
-                        <span>
+
+                <li class="menu-item">
+                    <a href="" class="menu-link">
+                        <span class="menu-text">
                             contatos
                         </span>
                     </a>
@@ -48,47 +51,53 @@
             </ul>
         </nav>
 
-        <div> <!-- trocar cor tema  -->
+        <div class="header-toggle"> <!-- trocar cor tema  -->
 
             <!-- icone sol -->
-            <i class="bi bi-brightness-high-fill"></i>
-            <!-- botão mobile -->
-            <i class="bi bi-list"></i>
+            <i class="bi bi-sun" id="toggleTheme"></i>
+
+            <button id="menuHamburger" class="btn-menu-mobile">
+                <!-- botão mobile -->
+                <i class="bi bi-list"></i>
+
+            </button>
+
+
 
         </div>
 
 
     </header>
     <!-- estrutura menu mobile  -->
-    <nav>
-        <ul>
-            <li>
-                <a href="">
-                    <span>
+    <nav class="menu-mobile menu menu-principal" id="menuMobile">
+        <ul class="menu-list">
+            <li class="menu-item">
+                <a href="" class="menu-link">
+                    <span class="menu-text">
                         home
                     </span>
                 </a>
             </li>
 
-            <li>
-                <a href="">
-                    <span>
+            <li class="menu-item">
+                <a href="" class="menu-link">
+                    <span class="menu-text">
                         projetos
                     </span>
                 </a>
             </li>
 
-            <li>
-                <a href="">
-                    <span>
+            <li class="menu-item">
+                <a href="" class="menu-link">
+                    <span class="menu-text">
                         contatos
                     </span>
                 </a>
             </li>
 
-            <li>
-                <a href="">
-                    <span>
+            <li class="menu-item">
+                <a href="" class="menu-link">
+                    <span class="menu-text">
                         sobre
                     </span>
                 </a>
@@ -97,7 +106,7 @@
         </ul>
     </nav>
 
-
+    <script src="script.js"></script>
 
 
 </body>
