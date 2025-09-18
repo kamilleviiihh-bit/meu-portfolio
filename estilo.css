@@ -8,7 +8,7 @@
     --cor-texto: rgb(248, 225, 233);
     --cor-borda: rgb(204, 198, 255);
     --menu-link: rgb(253, 229, 248);
-    --cor-cabeçalho: rgb(184, 184, 255);
+    --cor-cabecalho: rgb(70, 78, 139);
 }
 
 :root[data-theme='light'] {
@@ -19,6 +19,19 @@
     --cor-cabecalho: rgb(184, 184, 250);
 
 }
+
+/* reset css = padronizar */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/*inverter cor logo = filtro  */
+html[data-theme='light'] .logo {
+    filter: invert(1);
+}
+
+
 
 
 
@@ -47,7 +60,9 @@ header {
     align-items: center;
     width: 100%;
     background-color: var(--cor-cabecalho);
-    border-bottom: 5px solid var(--cor-borda);
+    border-bottom: 10px solid var(--cor-borda);
+    position: fixed;
+    z-index: 9999;
 }
 
 .menu-desktop {
@@ -153,10 +168,11 @@ header {
     /* altura */
 
 }
-.header-toggle{
-display: flex;
-justify-content: flex-end;
-align-items: center;
+
+.header-toggle {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
 }
 
 /* medidas responsivas */
