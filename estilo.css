@@ -175,6 +175,10 @@ header {
     align-items: center;
 }
 
+#home {
+    padding: 2.5rem 1rem;
+}
+
 /* medidas responsivas */
 
 @media(min-width: 768px) {
