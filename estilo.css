@@ -24,16 +24,13 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 /*inverter cor logo = filtro  */
 html[data-theme='light'] .logo {
     filter: invert(0);
 }
-
-
-
-
 
 body {
     /* hexadecimal */
