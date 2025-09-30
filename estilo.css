@@ -13,10 +13,10 @@
 
 :root[data-theme='light'] {
     --cor-fundo: rgb(245, 233, 237);
-    --cor-texto: rgb(143, 143, 212);
+    --cor-texto: rgb(94, 94, 188);
     --cor-borda: rgb(149, 141, 223);
     --menu-link: rgb(53, 45, 75);
-    --cor-cabecalho: rgb(184, 184, 250);
+    --cor-cabecalho: rgb(195, 195, 234);
 
 }
 
@@ -24,16 +24,13 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 /*inverter cor logo = filtro  */
 html[data-theme='light'] .logo {
     filter: invert(0);
 }
-
-
-
-
 
 body {
     /* hexadecimal */
@@ -175,6 +172,25 @@ header {
     align-items: center;
 }
 
+#home {
+    padding: 2.5rem 1rem;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+
+
 /* medidas responsivas */
 
 @media(min-width: 768px) {
@@ -190,5 +206,37 @@ header {
     .header-toggle {
         min-width: 30%;
     }
+
+    header {
+        padding: 1rem 6rem;
+    }
+
+    h1 {
+        font-size: 5rem;
+    }
+
+    #home {
+        padding: 8rem 6rem 4rem 6rem;
+    }
+
+    .main-content {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+}
+
+/* FIM min 768px */
+
+@media(min-width: 1400px) {
+    h1 {
+        font-size: 4rem;
+    }
+
+
+
+
+
 
 }
