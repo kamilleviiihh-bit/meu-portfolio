@@ -8,7 +8,7 @@
     --cor-texto: rgb(248, 225, 233);
     --cor-borda: rgb(204, 198, 255);
     --menu-link: rgb(253, 229, 248);
-    --cor-cabecalho: rgb(70, 78, 139);
+    --cor-cabecalho: rgb(138, 147, 230);
 }
 
 :root[data-theme='light'] {
