@@ -9,6 +9,7 @@
     --cor-borda: rgb(204, 198, 255);
     --menu-link: rgb(253, 229, 248);
     --cor-cabecalho: rgb(138, 147, 230);
+    --cor-decricao: rgb(166, 166, 242);
 }
 
 :root[data-theme='light'] {
@@ -17,7 +18,7 @@
     --cor-borda: rgb(149, 141, 223);
     --menu-link: rgb(53, 45, 75);
     --cor-cabecalho: rgb(195, 195, 234);
-
+    --cor-decricao: rgb(77, 77, 197);
 }
 
 /* reset css = padronizar */
@@ -176,6 +177,7 @@ header {
     padding: 2.5rem 1rem;
     display: flex;
     flex-direction: column;
+    gap: 1.5rem;
 
 }
 
@@ -188,6 +190,49 @@ header {
 h1 {
     font-size: 2.5rem;
 }
+
+.video iframe {
+    aspect-ratio: 16/9;
+}
+
+#home,
+.Albuns,
+.sobre,
+.contato {
+    padding: 2.5rem 1rem;
+}
+
+.descricao-video {
+    display: flex;
+    flex-direction: column;
+    background: var(--cor-decricao);
+    padding: 6.25rem 1rem 2rem;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: -8.5rem;
+}
+
+.descricao-video h2 {
+    font-size: 2rem;
+    text-align: justify;
+    margin-top: -2rem;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    letter-spacing: normal;
+    color: rgb(238, 198, 238);
+}
+
+.Albuns{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.projetos-container{
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+
 
 
 
@@ -215,7 +260,9 @@ h1 {
         font-size: 5rem;
     }
 
-    #home {
+    #home,
+    .Albuns,
+    .sobre {
         padding: 8rem 6rem 4rem 6rem;
     }
 
@@ -224,6 +271,8 @@ h1 {
         flex-direction: column;
         align-items: flex-start;
     }
+
+
 
 }
 
@@ -234,6 +283,13 @@ h1 {
         font-size: 4rem;
     }
 
+
+
+    .descricao-video,
+    .Albuns,
+    .sobre {
+        padding: 10rem 15rem 4rem;
+    }
 
 
 
