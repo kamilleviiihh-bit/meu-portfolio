@@ -18,7 +18,7 @@
     --cor-borda: rgb(149, 141, 223);
     --menu-link: rgb(53, 45, 75);
     --cor-cabecalho: rgb(195, 195, 234);
-    --cor-decricao: rgb(77, 77, 197);
+    --cor-decricao: rgb(153, 153, 255);
 }
 
 /* reset css = padronizar */
@@ -218,7 +218,7 @@ h1 {
     margin-top: -2rem;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     letter-spacing: normal;
-    color: rgb(238, 198, 238);
+    color: var(--menu-link);
 }
 
 .Albuns{
