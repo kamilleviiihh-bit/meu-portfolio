@@ -7,9 +7,9 @@
     --cor-fundo: rgb(70, 78, 139);
     --cor-texto: rgb(248, 225, 233);
     --cor-borda: rgb(204, 198, 255);
-    --menu-link: rgb(253, 229, 248);
+    --menu-link: rgb(247, 205, 238);
     --cor-cabecalho: rgb(138, 147, 230);
-    --cor-decricao: rgb(166, 166, 242);
+    --cor-decricao: rgb(156, 156, 242);
 }
 
 :root[data-theme='light'] {
@@ -18,7 +18,7 @@
     --cor-borda: rgb(149, 141, 223);
     --menu-link: rgb(53, 45, 75);
     --cor-cabecalho: rgb(195, 195, 234);
-    --cor-decricao: rgb(153, 153, 255);
+    --cor-decricao: rgb(255, 202, 255);
 }
 
 /* reset css = padronizar */
@@ -196,7 +196,7 @@ h1 {
 }
 
 #home,
-.Albuns,
+.albuns,
 .sobre,
 .contato {
     padding: 2.5rem 1rem;
@@ -218,19 +218,30 @@ h1 {
     margin-top: -2rem;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     letter-spacing: normal;
-    color: var(--menu-link);
+    color: var(--cor-texto);
 }
 
-.Albuns{
+.albuns {
     display: flex;
     flex-direction: column;
     gap: 2rem;
 }
 
-.projetos-container{
+.projetos-container {
     display: flex;
     flex-direction: column;
     gap: 4rem;
+}
+
+.album-card {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.img-card {
+    width: 100%;
+    border-radius: 0.5rem;
 }
 
 
@@ -261,7 +272,7 @@ h1 {
     }
 
     #home,
-    .Albuns,
+    .albuns,
     .sobre {
         padding: 8rem 6rem 4rem 6rem;
     }
@@ -274,9 +285,23 @@ h1 {
 
 
 
-}
+}/* FIM min 768px */
 
-/* FIM min 768px */
+@media(min-width: 992px) {
+    .album-card{
+        flex-direction: row;
+    }
+
+    .img-card1{
+    width: 55%;
+    height: 15%;
+    }
+
+    .img-card2{
+    width: 55%;
+    height: 15%;
+    }
+}
 
 @media(min-width: 1400px) {
     h1 {
@@ -286,7 +311,7 @@ h1 {
 
 
     .descricao-video,
-    .Albuns,
+    .albuns,
     .sobre {
         padding: 10rem 15rem 4rem;
     }
