@@ -239,9 +239,34 @@ h1 {
     gap: 2rem;
 }
 
-.img-card {
+.img-card1 {
     width: 100%;
     border-radius: 0.5rem;
+}
+
+.img-card2 {
+    width: 100%;
+    border-radius: 0.5rem;
+}
+
+.card-body{
+    display: flex;
+    flex-direction:column ;
+    justify-content: flex-start;
+    align-items: center;
+    gap:1rem ;
+}
+
+.card-title{
+    color: rgb(241, 168, 241);
+    font-size:2rem ;
+    font-weight:1rem ;
+    font-family: cursive;
+}
+
+.card-descricao{
+    color: var(--cor-texto);
+    font-size:1.5rem ;
 }
 
 
@@ -300,6 +325,12 @@ h1 {
     .img-card2{
     width: 55%;
     height: 15%;
+    }
+
+    .reverse-card{
+        /* espelhar */
+        flex-direction: row-reverse;
+
     }
 }
 
