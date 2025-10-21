@@ -212,13 +212,13 @@ header {
 }
 
 h1 {
+
     font-family: "Sour Gummy", sans-serif;
 
 }
 
 h2 {
     font-family: "The Girl Next Door", cursive;
-    
     text-align: justify;
     margin-top: -2rem;
     letter-spacing: normal;
@@ -226,8 +226,12 @@ h2 {
 }
 
 h3 {
-    
+
     font-family: "Sour Gummy", sans-serif;
+    text-align: justify;
+    margin-top: -2rem;
+    letter-spacing: normal;
+    color: var(--cor-texto);
 
 }
 
@@ -274,7 +278,7 @@ h3 {
 
 .card-descricao {
     color: var(--cor-texto);
-    
+
     font-family: "Sour Gummy", sans-serif;
 }
 
@@ -290,6 +294,14 @@ h3 {
 
 
 /* medidas responsivas */
+
+@media(max-width: 768px) {
+    #home {
+        padding-top: 5rem;
+    }
+}
+
+
 
 @media(min-width: 768px) {
     .menu-desktop {
