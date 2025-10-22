@@ -31,6 +31,11 @@
     box-sizing: border-box;
 }
 
+/* rolagem */
+html{
+    scroll-behavior: smooth;
+}
+
 /*inverter cor logo = filtro  */
 html[data-theme='light'] .logo {
     filter: invert(0);
