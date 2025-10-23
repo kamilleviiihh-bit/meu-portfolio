@@ -13,15 +13,25 @@
     --menu-link: rgb(247, 205, 238);
     --cor-cabecalho: rgb(138, 147, 230);
     --cor-decricao: rgb(156, 156, 242);
+    --cor-hover-icone: rgb(166, 146, 240);
+    --cor-hover-icone2: rgb(247, 197, 247);
+    --cor-hover-icone3: rgb(246, 172, 191);
+    --cor-hover-icone4: rgb(157, 203, 244);
+    --cor-hover-icone5: rgb(157, 236, 240);
 }
 
 :root[data-theme='light'] {
     --cor-fundo: rgb(245, 233, 237);
-    --cor-texto: rgb(94, 94, 188);
+    --cor-texto: rgb(87, 87, 177);
     --cor-borda: rgb(149, 141, 223);
     --menu-link: rgb(53, 45, 75);
     --cor-cabecalho: rgb(195, 195, 234);
     --cor-decricao: rgb(255, 202, 255);
+    --cor-hover-icone: rgb(244, 106, 244);
+    --cor-hover-icone2: rgb(189, 78, 189);
+    --cor-hover-icone3: rgb(200, 96, 122);
+    --cor-hover-icone4: rgb(44, 112, 172);
+    --cor-hover-icone5: rgb(58, 129, 133);
 }
 
 /* reset css = padronizar */
@@ -32,7 +42,7 @@
 }
 
 /* rolagem */
-html{
+html {
     scroll-behavior: smooth;
 }
 
@@ -295,6 +305,56 @@ h3 {
     font-family: "Sour Gummy", sans-serif;
 }
 
+.card-item i {
+    margin-right: 8px;
+}
+
+.card-item i:hover {
+    color: var(--cor-hover-icone);
+    transition: 0.1s ease-in-out;
+}
+
+.redes-sociais {
+    font-size: 1.3rem;
+
+}
+
+.redes-sociais i:hover {
+    color: var(--cor-hover-icone);
+    transition: 0.1s;
+}
+
+.redes-sociais .instagram {
+    color: rgb(164, 202, 235);
+}
+
+.redes-sociais .instagram:hover {
+    color: var(--cor-hover-icone2);
+}
+
+.redes-sociais .switch {
+    color: rgb(157, 157, 244);
+}
+
+.redes-sociais .switch:hover {
+    color: var(--cor-hover-icone3);
+}
+
+.redes-sociais .secret {
+    color: rgb(248, 160, 173);
+}
+
+.redes-sociais .secret:hover {
+    color: var(--cor-hover-icone4);
+}
+
+.redes-sociais .empathy {
+    color: rgb(242, 152, 242);
+}
+
+.redes-sociais .empathy:hover {
+    color: var( --cor-hover-icone5);
+}
 
 
 
@@ -306,7 +366,7 @@ h3 {
     }
 }
 
-
+/* fim max 768px */
 
 @media(min-width: 768px) {
     .menu-desktop {
