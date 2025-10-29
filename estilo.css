@@ -357,8 +357,21 @@ h3 {
 }
 
 
+.col6{
+    background-color: rgb(171, 203, 231);
+}
 
+.col5{
+background: rgb(237, 173, 195);
+}
 
+.col7{
+background: rgb(240, 144, 240);
+}
+
+.col8{
+    background: rgb(148, 148, 239);
+}
 
 /* medidas responsivas */
 
