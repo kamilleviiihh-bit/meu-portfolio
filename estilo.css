@@ -44,6 +44,7 @@
 /* rolagem */
 html {
     scroll-behavior: smooth;
+    font-size: 62.5%;
 }
 
 /*inverter cor logo = filtro  */
@@ -109,7 +110,7 @@ header {
 
 .menu-text {
     color: var(--cor-texto);
-    font-size: 0.9rem;
+    font-size: 2rem;
 }
 
 /* menu hamburger */
@@ -124,7 +125,7 @@ header {
     cursor: pointer;
     color: var(--cor-texto);
     display: flex;
-    font-size: 1rem;
+    font-size: 2rem;
     align-items: center;
     justify-content: center;
     padding: 0.5rem;
@@ -174,7 +175,7 @@ header {
 .menu-mobile .menu-link {
     padding: 0.5rem 0;
     display: inline-block;
-    font-size: 1rem;
+    font-size: 1.6rem;
 }
 
 .logo {
@@ -189,6 +190,7 @@ header {
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    font-size: 1.6rem;
 }
 
 #home {
@@ -203,6 +205,7 @@ header {
     display: flex;
     flex-direction: column;
     gap: 0.4rem;
+    padding-top: 2.5rem;
 }
 
 .video iframe {
@@ -315,7 +318,7 @@ h3 {
 }
 
 .redes-sociais {
-    font-size: 1.3rem;
+    font-size: 1.6rem;
 
 }
 
@@ -353,25 +356,27 @@ h3 {
 }
 
 .redes-sociais .empathy:hover {
-    color: var( --cor-hover-icone5);
+    color: var(--cor-hover-icone5);
 }
 
+/* sobre */
 
-.col6{
-    background-color: rgb(171, 203, 231);
+.sobre {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
 }
 
-.col5{
-background: rgb(237, 173, 195);
+.sobre-logo{
+    width: 100%;
+    border-radius: 5rem;
+    border: 2px solid var(--cor-borda);
 }
 
-.col7{
-background: rgb(240, 144, 240);
-}
-
-.col8{
-    background: rgb(148, 148, 239);
-}
+    .sobre-descricao p{
+        text-align: justify;
+        font-size: 1.6rem;
+    }
 
 /* medidas responsivas */
 
@@ -402,16 +407,16 @@ background: rgb(240, 144, 240);
     }
 
     h1 {
-        font-size: 4.5rem;
+        font-size: 7.2rem;
 
     }
 
     h2 {
-        font-size: 3.5rem;
+        font-size: 5.6rem;
     }
 
     h3 {
-        font-size: 1.5rem;
+        font-size: 2.4rem;
     }
 
     #home,
@@ -457,7 +462,7 @@ background: rgb(240, 144, 240);
 @media(min-width:1200px) {
 
     h2 {
-        font-size: 4rem;
+        font-size: 6.4rem;
     }
 
 }
@@ -466,15 +471,15 @@ background: rgb(240, 144, 240);
 
 @media(min-width: 1400px) {
     h1 {
-        font-size: 3.5rem;
+        font-size: 5.6rem;
     }
 
     h2 {
-        font-size: 2.5rem;
+        font-size: 4rem;
     }
 
     h3 {
-        font-size: 1.25;
+        font-size: 2rem;
     }
 
 
