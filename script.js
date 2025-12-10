@@ -1,40 +1,38 @@
 document.addEventListener('DOMContentLoaded', () => {
     const toggleTheme = document.getElementById("toggleTheme");
     const rootHtml = document.documentElement;
-    const accordionHeaders = document.querySelectorAll(".accordion-header");
     const menuLinks = document.querySelectorAll(".menu-link");
     const menuHamburger = document.getElementById('menuHamburger');
     const menuMobile = document.getElementById('menuMobile');
     const icon = menuHamburger?.querySelector('i');
 
-    // Alternar tema (claro/escuro)
+    // 1. Alternar tema (claro/escuro)
     function changeTheme() {
         const currentTheme = rootHtml.getAttribute("data-theme");
         const isDark = currentTheme === "dark";
+        // Altera o atributo data-theme na tag <html>
         rootHtml.setAttribute("data-theme", isDark ? "light" : "dark");
-        toggleTheme.classList.toggle("bi-sun", !isDark);
-        toggleTheme.classList.toggle("bi-moon-stars", isDark);
+        
+        if (toggleTheme) {
+            // Alterna os ícones do Bootstrap para representar o tema (sol/lua)
+            toggleTheme.classList.toggle("bi-sun", isDark); 
+            toggleTheme.classList.toggle("bi-moon-stars-fill", !isDark); 
+        }
     }
-
+    
+    // Configuração inicial do ícone de tema
     if (toggleTheme) {
+        const isDark = rootHtml.getAttribute("data-theme") === "dark";
+        // Certifica-se de que a classe correta está presente na inicialização
+        toggleTheme.classList.add(isDark ? "bi-moon-stars-fill" : "bi-sun");
         toggleTheme.addEventListener("click", changeTheme);
     }
 
-    // Acordeões
-    accordionHeaders.forEach(header => {
-        header.addEventListener("click", () => {
-            const accordionItem = header.parentElement;
-            accordionItem.classList.toggle("active");
-        });
-    });
 
-    // Ativar link clicado no menu
+    // 2. Navegação e Menu Mobile
     menuLinks.forEach(item => {
         item.addEventListener("click", () => {
-            menuLinks.forEach(i => i.classList.remove("active"));
-            item.classList.add("active");
-
-            // Fecha o menu mobile ao clicar no link
+            // Fecha o menu mobile ao clicar no link para navegar
             if (menuMobile?.classList.contains('active')) {
                 menuMobile.classList.remove('active');
                 if (icon) {
@@ -45,10 +43,11 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Alternar menu mobile e ícone
+    // Alternar menu mobile e ícone (list/x)
     function toggleMenu() {
         const isOpen = menuMobile.classList.toggle('active');
         if (icon) {
+            // Usa 'bi-list' para Fechado e 'bi-x-lg' para Aberto
             icon.classList.toggle('bi-list', !isOpen);
             icon.classList.toggle('bi-x-lg', isOpen);
         }
@@ -56,59 +55,5 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (menuHamburger) {
         menuHamburger.addEventListener('click', toggleMenu);
-    }
-
-    // Máscara do telefone
-    const telefoneInput = document.getElementById("telefone");
-
-    if (telefoneInput) {
-        telefoneInput.addEventListener("input", (e) => {
-            let input = e.target.value.replace(/\D/g, "");
-            if (input.length > 11) input = input.slice(0, 11);
-
-            let formatted = "";
-            if (input.length > 0) formatted += "(" + input.slice(0, 2);
-            if (input.length >= 3) formatted += ") " + input.slice(2, 7);
-            if (input.length >= 8) formatted += "-" + input.slice(7, 11);
-
-            e.target.value = formatted;
-        });
-    }
-
-    // Validação e envio do formulário com limpeza
-    const form = document.querySelector(".form-contato");
-
-    if (form) {
-        form.addEventListener("submit", async function (event) {
-            event.preventDefault(); // Impede a atualização da página
-
-            const telefoneValor = telefoneInput?.value.replace(/\D/g, "");
-            if (!telefoneValor || telefoneValor.length !== 11) {
-                alert("Por favor, insira um telefone válido com 11 dígitos.");
-                telefoneInput?.focus();
-                return;
-            }
-
-            const formData = new FormData(form);
-            const action = form.getAttribute("action");
-
-            try {
-                const response = await fetch(action, {
-                    method: "POST",
-                    body: formData,
-                    headers: { "Accept": "application/json" }
-                });
-
-                if (response.ok) {
-                    alert("Mensagem enviada com sucesso!");
-                    form.reset();
-                } else {
-                    alert("Erro ao enviar a mensagem. Tente novamente.");
-                }
-
-            } catch (error) {
-                alert("Erro de conexão. Verifique sua internet.");
-            }
-        });
     }
 });

@@ -1,428 +1,475 @@
 /* css externo */
 /* google fonts */
-@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&family=The+Girl+Next+Door&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&family=The+Girl+Next+Door&family=Poppins:wght@300;400;600;700&display=swap');
 
+
+/* Paleta IVE Glamour: Roxo Profundo, Magenta, Prata/Azul Claro */
 
 /* definir as cores tema dark */
-/* raiz */
 :root,
 :root[data-theme='dark'] {
-    --cor-fundo: rgb(70, 78, 139);
-    --cor-texto: rgb(248, 225, 233);
-    --cor-borda: rgb(204, 198, 255);
-    --menu-link: rgb(247, 205, 238);
-    --cor-cabecalho: rgb(138, 147, 230);
-    --cor-decricao: rgb(156, 156, 242);
-    --cor-hover-icone: rgb(166, 146, 240);
-    --cor-hover-icone2: rgb(247, 197, 247);
-    --cor-hover-icone3: rgb(246, 172, 191);
-    --cor-hover-icone4: rgb(157, 203, 244);
-    --cor-hover-icone5: rgb(157, 236, 240);
+    /* Fundo Roxo Escuro Premium */
+    --cor-fundo: #1b0028; 
+    /* Texto Branco/Prata */
+    --cor-texto: #f0e6ff; 
+    /* Destaque Neon Roxo/Magenta */
+    --cor-borda: #d090ff; 
+    /* Links/Menu Roxo Claro Brilhante */
+    --menu-link: #a7d3ff; 
+    /* Cabeçalho Roxo Médio Elegante */
+    --cor-cabecalho: #3a1a54; 
+    /* Fundo de Seção/Card Roxo Suave */
+    --cor-decricao: #2a0a40; 
+    /* Hovers/Acentos Magenta Brilhante */
+    --cor-hover-icone: #ff69b4; 
+    --cor-hover-icone2: #6495ed; 
+    --cor-hover-icone3: #c090ff; 
+    --cor-hover-icone4: #e0b0ff; 
+    --cor-hover-icone5: #ffdf00;
     
+    /* Variáveis de Sombra Neon */
+    --neon-glow: 0 0 10px var(--cor-borda), 0 0 20px rgba(208, 144, 255, 0.5);
+    --card-shadow-hover: 0 8px 20px rgba(255, 105, 180, 0.7), 0 0 5px var(--cor-borda);
 }
 
 :root[data-theme='light'] {
-    --cor-fundo: rgb(245, 233, 237);
-    --cor-texto: rgb(87, 87, 177);
-    --cor-borda: rgb(149, 141, 223);
-    --menu-link: rgb(53, 45, 75);
-    --cor-cabecalho: rgb(195, 195, 234);
-    --cor-decricao: rgb(255, 202, 255);
-    --cor-hover-icone: rgb(244, 106, 244);
-    --cor-hover-icone2: rgb(189, 78, 189);
-    --cor-hover-icone3: rgb(200, 96, 122);
-    --cor-hover-icone4: rgb(44, 112, 172);
-    --cor-hover-icone5: rgb(58, 129, 133);
+    /* Fundo Rosa Claro/Branco */
+    --cor-fundo: #fdf5f9; 
+    /* Texto Roxo Escuro */
+    --cor-texto: #4d2372; 
+    /* Borda Roxo Médio */
+    --cor-borda: #9d80b9; 
+    /* Links Roxo Mais Escuro */
+    --menu-link: #1b0028; 
+    /* Cabeçalho Lilás Suave */
+    --cor-cabecalho: #e0b0ff; 
+    /* Fundo de Seção/Card Rosa Claro */
+    --cor-decricao: #f5e0f9; 
+    /* Hovers/Acentos Magenta */
+    --cor-hover-icone: #ff69b4;
+    --cor-hover-icone2: #4d2372;
+    --cor-hover-icone3: #9d80b9;
+    --cor-hover-icone4: #6495ed;
+    --cor-hover-icone5: #ffdf00;
     
+    /* Variáveis de Sombra Neon (Suave) */
+    --neon-glow: 0 0 5px rgba(157, 128, 185, 0.5), 0 0 10px rgba(224, 176, 255, 0.3);
+    --card-shadow-hover: 0 5px 15px rgba(157, 128, 185, 0.5);
 }
 
-/* reset css = padronizar */
+/* Base Geral */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-/* rolagem */
-html {
-    scroll-behavior: smooth;
-    font-size: 62.5%;
-}
-
-/*inverter cor logo = filtro  */
-html[data-theme='light'] .logo {
-    filter: invert(0);
+    font-family: 'Poppins', sans-serif; /* Fonte profissional para o corpo */
 }
 
 body {
-    /* hexadecimal */
-    background: var(--cor-fundo);
-    /* cor de fundo */
+    background-color: var(--cor-fundo);
     color: var(--cor-texto);
-    /* cor de texto  */
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* Transições globais mais rápidas para tema e fundo */
+    transition: background-color 0.4s ease, color 0.4s ease; 
 }
 
 a {
-    color: var(--menu-link);
     text-decoration: none;
+    color: var(--menu-link);
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--cor-hover-icone);
+}
+
+/* --------------------------------- */
+/* EFEITOS DE ANIMAÇÃO E TRANSIÇÃO */
+/* --------------------------------- */
+
+/* 1. Animação de Carregamento (Fade In) */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 1s ease-out forwards;
+    /* Adiciona atrasos sequenciais em media query desktop */
+}
+
+/* Atrasos para um carregamento sequencial */
+.main-content { animation-delay: 0.2s; }
+.video { animation-delay: 0.4s; }
+.descricao-video { animation-delay: 0.6s; }
+.albuns { animation-delay: 0.8s; }
+.sobre { animation-delay: 1.0s; }
+.contato { animation-delay: 1.2s; }
+
+
+/* 2. Títulos IVE Glamour */
+.titulo-ive {
     font-family: "Sour Gummy", sans-serif;
-}
-
-ul {
-    list-style: none;
-    /* estilo de lista */
-}
-
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    background-color: var(--cor-cabecalho);
-    border-bottom: 1rem solid var(--cor-borda);
-    position: fixed;
-    z-index: 9999;
-}
-
-.menu-desktop {
-    background-color: var(--cor-cabecalho);
-    display: none;
-    /* esconde o menu desktop */
-}
-
-/* nav ou ul */
-.menu {
-    display: flex;
-    /* em linha */
-    /* horizontal */
-    gap: 1rem;
-    /* 16px */
-    align-items: center;
-}
-
-.menu-item {
-    width: 100%;
-}
-
-.menu-link {
-    display: flex;
-    align-items: center;
-}
-
-.menu-text {
-    color: var(--cor-texto);
-    font-size: 2rem;
-}
-
-/* menu hamburger */
-
-#menuHamburger {
-    margin-left: 1rem;
-}
-
-.btn-menu-mobile {
-    background: transparent;
-    border: none;
-    cursor: pointer;
-    color: var(--cor-texto);
-    display: flex;
-    font-size: 2rem;
-    align-items: center;
-    justify-content: center;
-    padding: 0.5rem;
-}
-
-.menu-mobile {
-    /* NAV */
-    position: fixed;
-    top: 0;
-    right: 0;
-    background: var(--cor-fundo);
-    width: 75%;
-    height: 100vh;
-    /* viewPort Altura */
-    border-left: 1px solid var(--cor-borda);
-    max-width: 320px;
-    display: flex;
-    flex-direction: column;
-    padding-top: 4rem;
-    transition: .3s ease-in-out;
-    transform: translateX(100%);
-}
-
-/* ativar menu mobile  */
-.menu-mobile.active {
-    transform: translateX(0%);
-}
-
-.menu-mobile
-
-/* nav */
-.menu-list {
-    /* ul */
-    display: flex;
-    flex-direction: column;
-    /* eixo Y = vertical */
-    gap: 1rem;
-    width: 100%;
-    padding: 1.6rem 1.6rem 3.2rem;
-}
-
-.menu-mobile .menu-item {
-    width: 100%;
-    text-align: center;
-}
-
-.menu-mobile .menu-link {
-    padding: 0.5rem 0;
-    display: inline-block;
-    font-size: 1.6rem;
-}
-
-.logo {
-    width: 5.2rem;
-    /* comprimento */
-    height: 3rem;
-    /* altura */
-
-}
-
-.header-toggle {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    font-size: 1.6rem;
-}
-
-#home {
-    padding: 4rem 1.6rem;
-    display: flex;
-    flex-direction: column;
-    gap: 2.4rem;
-
-}
-
-.main-content {
-    display: flex;
-    flex-direction: column;
-    gap: 0.4rem;
-    padding-top: 2.5rem;
-}
-
-.video iframe {
-    aspect-ratio: 16/9;
-}
-
-#home,
-.albuns,
-.sobre,
-.contato {
-    padding: 2.5rem 1rem;
-}
-
-.descricao-video {
-    display: flex;
-    flex-direction: column;
-    background: var(--cor-decricao);
-    padding: 6.25rem 1rem 2rem;
-    align-items: center;
-    justify-content: flex-start;
-    margin-top: -8.5rem;
-
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: var(--cor-borda);
+    text-shadow: var(--neon-glow); /* Variável de brilho neon */
+    transition: all 0.4s ease;
 }
 
 h1 {
-
-    font-family: "Sour Gummy", sans-serif;
-    font-size: 2.3rem;
-
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 1.8rem;
+    color: var(--cor-texto);
+    margin: 2rem 0;
+    text-align: center;
+    line-height: 1.4;
+    text-shadow: 0 0 5px rgba(240, 230, 255, 0.2);
 }
 
 h2 {
     font-family: "The Girl Next Door", cursive;
-    text-align: justify;
-    margin-top: 3.2rem;
-    letter-spacing: normal;
+    text-align: center;
+    margin-top: 1.5rem;
+    letter-spacing: 1px;
     color: var(--cor-texto);
     font-size: 1.8rem;
-
+    text-shadow: 0 0 8px rgba(240, 230, 255, 0.3); 
+    margin-bottom: 1rem;
+    transition: color 0.4s;
 }
 
-h3 {
+h3.text-center {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 2.2rem;
+    color: var(--cor-borda);
+    margin-bottom: 3rem;
+    text-transform: uppercase;
+    text-shadow: 0 0 5px rgba(208, 144, 255, 0.4);
+    transition: color 0.4s;
+}
 
-    font-family: "Sour Gummy", sans-serif;
-    text-align: justify;
-    margin-top: 3.2rem;
-    letter-spacing: normal;
+.card-title {
+    color: var(--cor-hover-icone);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+}
+
+
+/* 3. Cabeçalho e Menu */
+header {
+    background-color: var(--cor-cabecalho);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    border-bottom: 3px solid var(--cor-borda);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Sombra mais profissional */
+    transition: background-color 0.4s, border-bottom 0.4s;
+}
+
+.menu-desktop {
+    display: none;
+}
+
+.menu-desktop .menu {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.menu-link {
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.menu-link:hover {
+    background-color: var(--cor-decricao);
+    color: var(--cor-hover-icone);
+    transform: translateY(-2px); /* Efeito sutil de levantar */
+}
+
+/* Toggle Menu/Tema */
+.header-toggle {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.btn-menu-mobile {
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.btn-menu-mobile i {
     color: var(--cor-texto);
+    font-size: 2rem;
+    transition: color 0.3s ease;
 }
 
-.text-center{
-    font-size: 5.5rem;
+.btn-menu-mobile:hover i {
+    color: var(--cor-borda);
 }
 
-.roda-pe{
-    font-size: 1.6rem;
+#toggleTheme {
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--cor-texto);
+    transition: color 0.3s ease, transform 0.3s ease;
 }
 
-.roda-pe i{
-    color: rgb(177, 177, 252);
+#toggleTheme:hover {
+    color: var(--cor-hover-icone);
+    transform: rotate(30deg) scale(1.1); /* Efeito de giro sutil */
 }
 
-.roda-pe a{
-color:rgb(182, 250, 250);
+/* Menu Mobile */
+.menu-mobile {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 70%;
+    height: 100%;
+    background-color: var(--cor-cabecalho);
+    padding-top: 5rem;
+    z-index: 999;
+    transition: right 0.4s ease-in-out;
 }
 
-.roda-pe i:hover{
-color: var(--cor-hover-icone);
-} 
-
-.roda-pe a:hover{
-color:var(--cor-hover-icone2) ;
+.menu-mobile.active {
+    right: 0;
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.5);
 }
 
+.menu-mobile .menu-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.menu-mobile .menu-link {
+    display: block;
+    width: 100%;
+    padding: 1rem;
+    text-align: center;
+    border-radius: 8px;
+}
+
+/* 4. Seções e Conteúdo Principal */
+main {
+    padding-top: 5rem;
+}
+
+.main-content {
+    padding: 2rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Redes Sociais */
+.redes-sociais {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.redes-sociais i {
+    font-size: 1.5rem;
+    color: var(--menu-link);
+    transition: color 0.3s, transform 0.3s;
+}
+
+.redes-sociais a:hover i {
+    color: var(--cor-hover-icone);
+    transform: scale(1.1);
+}
+
+/* Vídeo */
+.video {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+    height: 0;
+    overflow: hidden;
+    margin-bottom: 1rem;
+    border: 3px solid var(--cor-borda);
+    box-shadow: var(--neon-glow);
+}
+
+.video iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.descricao-video {
+    padding: 0 1rem 3rem 1rem;
+    background-color: var(--cor-decricao);
+    transition: background-color 0.4s;
+}
+
+
+/* 5. Seção de Álbuns */
 .albuns {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-}
-
-.projetos-container {
-    display: flex;
-    flex-direction: column;
-    gap: 4rem;
+    padding: 4rem 1rem;
+    background-color: var(--cor-fundo);
 }
 
 .album-card {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    margin-bottom: 3rem;
+    border: 1px solid var(--cor-borda);
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: var(--cor-decricao);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
-.img-card1 {
-    width: 100%;
-    border-radius: 0.5rem;
+.album-card:hover { 
+    transform: translateY(-8px); /* Elevação profissional */
+    box-shadow: var(--card-shadow-hover); /* Sombra colorida no hover */
 }
 
-.img-card2 {
+.album-card .img-card {
     width: 100%;
-    border-radius: 0.5rem;
+    height: auto;
+    object-fit: cover;
+    transition: opacity 0.3s;
+}
+
+.album-card:hover .img-card {
+    opacity: 0.9;
 }
 
 .card-body {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 1.6rem;
-}
-
-.card-title {
-    color: rgb(241, 168, 241);
-    font-family: "Pacifico", cursive;
-    font-size: 2.5rem;
+    padding: 1.5rem;
 }
 
 .card-descricao {
     color: var(--cor-texto);
-    font-size: 1.6rem;
-    font-family: "Sour Gummy", sans-serif;
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
 }
 
+.card-lista {
+    list-style: none;
+    padding-left: 0;
+}
 
-
-.card-lista .card-item {
+.card-item {
+    font-size: 0.9rem;
     color: var(--cor-texto);
-    margin-bottom: 1.6rem;
-    font-family: "Sour Gummy", sans-serif;
-    font-size: 1.6rem;
+    margin-bottom: 0.5rem;
 }
 
 .card-item i {
-    margin-right: 8px;
+    color: var(--cor-borda);
+    margin-right: 0.5rem;
 }
 
-.card-item i:hover {
-    color: var(--cor-hover-icone);
-    transition: 0.1s ease-in-out;
-}
 
-.redes-sociais {
-    font-size: 2rem;
-
-}
-
-.redes-sociais i:hover {
-    color: var(--cor-hover-icone);
-    transition: 0.1s;
-}
-
-.redes-sociais .instagram {
-    color: rgb(70, 162, 241);
-
-}
-
-.redes-sociais .instagram:hover {
-    color: var(--cor-hover-icone2);
-}
-
-.redes-sociais .switch {
-    color: rgb(157, 157, 244);
-}
-
-.redes-sociais .switch:hover {
-    color: var(--cor-hover-icone3);
-}
-
-.redes-sociais .secret {
-    color: rgb(248, 160, 173);
-}
-
-.redes-sociais .secret:hover {
-    color: var(--cor-hover-icone4);
-}
-
-.redes-sociais .empathy {
-    color: rgb(242, 152, 242);
-}
-
-.redes-sociais .empathy:hover {
-    color: var(--cor-hover-icone5);
-}
-
-/* sobre */
-
+/* 6. Seção Sobre */
 .sobre {
+    padding: 4rem 1rem;
+    background-color: var(--cor-decricao);
+    transition: background-color 0.4s;
+}
+
+.sobre-conteudo {
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
+    align-items: center;
+    max-width: 900px;
+    margin: 0 auto;
+    padding-top: 2rem;
 }
 
 .sobre-logo {
-    width: 100%;
-    border-radius: 5rem;
-    border: 2px solid var(--cor-borda);
+    width: 80%;
+    max-width: 250px;
+    height: auto;
+    margin-bottom: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 0 15px var(--cor-borda);
 }
 
 .sobre-descricao p {
-    text-align: justify;
-    font-size: 1.6rem;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    color: var(--cor-texto);
 }
 
+.sobre-descricao strong {
+    color: var(--cor-hover-icone);
+}
+
+
+/* 7. Seção Contato */
+.contato {
+    padding: 4rem 1rem;
+    min-height: 30vh;
+}
+
+
+/* 8. Rodapé */
+footer {
+    padding: 2rem 1rem;
+    background-color: var(--cor-cabecalho);
+    border-top: 3px solid var(--cor-borda);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); 
+    transition: background-color 0.4s, border-top 0.4s;
+}
+
+.roda-pe {
+    color: var(--cor-texto);
+    font-size: 0.85rem;
+    line-height: 1.5;
+}
+
+.roda-pe i {
+    color: var(--cor-borda);
+    font-size: 1rem;
+}
+
+.roda-pe a:hover i {
+    color: var(--cor-hover-icone);
+    transform: scale(1.2); 
+}
 
 
 /* medidas responsivas */
 
-@media(max-width: 768px) {
-    #home {
-        padding-top: 5rem;
-    }
-}
-
-/* fim max 768px */
-
 @media(min-width: 768px) {
+    /* Desktop Menu */
     .menu-desktop {
         display: flex;
         min-width: 30%;
@@ -432,103 +479,81 @@ color:var(--cor-hover-icone2) ;
         display: none;
     }
 
-    .header-toggle {
-        min-width: 30%;
+    .menu-mobile {
+        display: none;
     }
 
+    header {
+        padding: 1rem 4rem;
+    }
+    
+    .titulo-ive {
+        font-size: 4rem;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+        max-width: 800px;
+    }
+    
+    h2 {
+        font-size: 2.5rem;
+    }
+    
+    h3.text-center {
+        font-size: 3.5rem;
+    }
+    
+    /* Seções com padding maior */
+    .main-content,
+    .albuns,
+    .sobre,
+    .contato { 
+        padding: 8rem 4rem 4rem 4rem;
+    }
+    
+    /* Layout dos Cards de Álbum em Desktop */
+    .album-card {
+        flex-direction: row;
+        align-items: stretch;
+    }
+
+    .album-card .img-card {
+        width: 40%;
+        height: 100%;
+    }
+    
+    .album-card .card-body {
+        width: 60%;
+    }
+
+    .album-card.reverse-card {
+        flex-direction: row-reverse;
+    }
+
+    /* Layout da Seção Sobre */
+    .sobre-conteudo {
+        flex-direction: row;
+        align-items: flex-start;
+        text-align: left;
+    }
+
+    .sobre-logo {
+        width: 100%;
+        margin-right: 2rem;
+        margin-bottom: 0;
+    }
+}
+
+@media(min-width: 1024px) {
     header {
         padding: 1rem 6rem;
     }
 
-    h1 {
-        font-size: 7.2rem;
-
-    }
-
-    h2 {
-        font-size: 5.6rem;
-    }
-
-    h3 {
-        font-size: 2.4rem;
-    }
-
-    #home,
+    .main-content,
     .albuns,
-    .sobre {
+    .sobre,
+    .contato { 
         padding: 8rem 6rem 4rem 6rem;
     }
-
-    .main-content {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-
-
-}
-
-/* FIM min 768px */
-
-@media(min-width: 992px) {
-    
-    
-    
-    .album-card {
-        flex-direction: row;
-    }
-
-    .img-card1 {
-        width: 55%;
-        height: 15%;
-    }
-
-    .img-card2 {
-        width: 55%;
-        height: 15%;
-    }
-
-    .reverse-card {
-        /* espelhar */
-        flex-direction: row-reverse;
-
-    }
-}
-
-@media(min-width:1200px) {
-
-    h2 {
-        font-size: 6.4rem;
-    }
-
-}
-
-
-
-@media(min-width: 1400px) {
-    h1 {
-        font-size: 5.6rem;
-    }
-
-    h2 {
-        font-size: 4rem;
-    }
-
-    h3 {
-        font-size: 2rem;
-    }
-
-
-
-    .descricao-video,
-    .albuns,
-    .sobre {
-        padding: 10rem 15rem 4rem;
-    }
-
-
-
-
-
 }

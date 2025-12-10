@@ -4,42 +4,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IVE</title>
+    <title>IVE - Portfolio Glamour</title>
 
-    <!-- icone -->
-    <link rel="shortcup icon" href="favicon.ico">
+    <link rel="shortcut icon" href="favicon.ico">
 
-    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 
 
-    <!-- bootstrap icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
 
 
-
-    <!-- CSS Externo -->
     <link rel="stylesheet" href="estilo.css">
 </head>
 
 <body>
 
-    <header> <!-- cabeçalho -->
-        <nav class="menu-desktop"> <!-- menu desktop -->
-            <ul class="menu menu-principal">
+    <header> <nav class="menu-desktop"> <ul class="menu menu-principal">
                 <li class="menu-item">
                     <a href="#home" class="menu-link">
                         <span class="menu-text">
-                            home
+                            <i class="bi-house-door-fill"></i> home
                         </span>
                     </a>
-                </li> <!-- lista -->
-
-                <li class="menu-item">
+                </li> <li class="menu-item">
                     <a href="#albuns" class="menu-link">
                         <span class="menu-text">
-                            albuns
+                            <i class="bi-disc-fill"></i> álbuns
                         </span>
                     </a>
                 </li>
@@ -47,58 +38,33 @@
                 <li class="menu-item">
                     <a href="#sobre" class="menu-link">
                         <span class="menu-text">
-                            sobre
+                            <i class="bi-person-badge-fill"></i> sobre
                         </span>
                     </a>
                 </li>
 
-                <li class="menu-item">
-                    <a href="#contato" class="menu-link">
-                        <span class="menu-text">
-                            contato
-                        </span>
-                    </a>
-                </li>
             </ul>
         </nav>
 
-        <!-- logo -->
-        <div class="header-logo">
-            <a href="">
-                <img src="img/logo.png" alt="" class="logo">
-            </a>
-        </div>
+        <h1 class="titulo-ive">IVE</h1>
 
 
-
-
-
-
-
-        <div class="header-toggle"> <!-- trocar cor tema  -->
-
-            <!-- icone sol -->
-            <i class="bi bi-sun" id="toggleTheme"></i>
+        <div class="header-toggle"> <i class="bi bi-moon-stars-fill" id="toggleTheme"></i>
 
             <button id="menuHamburger" class="btn-menu-mobile">
-                <!-- botão mobile -->
                 <i class="bi bi-list"></i>
-
             </button>
-
-
 
         </div>
 
 
     </header>
-    <!-- estrutura menu mobile  -->
     <nav class="menu-mobile menu menu-principal" id="menuMobile">
         <ul class="menu-list">
             <li class="menu-item">
                 <a href="#home" class="menu-link">
                     <span class="menu-text">
-                        home
+                        <i class="bi-house-door-fill"></i> home
                     </span>
                 </a>
             </li>
@@ -106,7 +72,7 @@
             <li class="menu-item">
                 <a href="#albuns" class="menu-link">
                     <span class="menu-text">
-                        albuns
+                        <i class="bi-disc-fill"></i> álbuns
                     </span>
                 </a>
             </li>
@@ -114,49 +80,40 @@
             <li class="menu-item">
                 <a href="#sobre" class="menu-link">
                     <span class="menu-text">
-                        sobre
+                        <i class="bi-person-badge-fill"></i> sobre
                     </span>
                 </a>
             </li>
 
-            <li class="menu-item">
-                <a href="#contato" class="menu-link">
-                    <span class="menu-text">
-                        contato
-                    </span>
-                </a>
-            </li>
 
         </ul>
     </nav>
 
-    <main id="home">
+    <main>
 
-        <!-- seção principal -->
-        <section class="main-content">
-            <!-- titulo principal -->
+        <section class="main-content fade-in" id="home">
             <h1>IVE: Nascidas com tudo. A confiança inabalável que define a 4ª geração.</h1>
 
             <ul class="menu redes-sociais">
                 <li>
                     <a href="https://github.com/kamilleviiihh-bit" class="menu-link" target="_blank">
-                        <i class="bi bi-github switch"></i>
+                        <i class="bi bi-github"></i>
                     </a>
                 </li>
                 <li>
                     <a href="https://www.instagram.com/ivestarship/" class="menu-link" target="_blank">
-                        <i class="bi bi-instagram instagram"></i>
+                        <i class="bi bi-instagram"></i>
                     </a>
                 </li>
 
                 <li>
                     <a href="https://www.tiktok.com/@ive.official?lang=pt" class="menu-link" target="_blank">
-                        <i class="bi bi-tiktok secret"></i>
+                        <i class="bi bi-tiktok"></i>
                     </a>
                 </li>
                 <li>
                     <a href="https://www.youtube.com/@IVEstarship" class="menu-link" target="_blank">
-                        <i class="bi bi-youtube empathy"></i>
+                        <i class="bi bi-youtube"></i>
                     </a>
                 </li>
             </ul>
@@ -165,7 +122,7 @@
 
 
 
-        <div class="video">
+        <div class="video fade-in">
             <iframe src="https://www.youtube.com/embed/Te78AQ4OY0w?list=RDTe78AQ4OY0w"
                 title="IVE(아이브) &#39;XOXZ&#39; (4K) | STUDIO CHOOM ORIGINAL" frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -173,41 +130,34 @@
         </div>
 
 
-    </main>
-
-    <section class="descricao-video">
+    <section class="descricao-video fade-in">
         <h2>
             O vídeo é a performance de “XOXZ” pelo IVE no canal STUDIO CHOOM.
-
         </h2>
     </section>
 
-    <section class="albuns" id="albuns">
-        <h3 class="text-center">albuns</h3>
+    <section class="albuns fade-in" id="albuns">
+        <h3 class="text-center">álbuns</h3>
 
-        <div class="projetos-container">
-
-            <!-- IVE Secret -->
+        <div class="container">
             <div class="album-card">
 
                 <img src="img/projetos/musica1.jpeg"
                     alt="Seis jovens sentadas lado a lado em uma calçada, usando botas pretas de cano alto com cadarços brancos e roupas em tons de preto e vermelho, posando de forma estilosa."
-                    class="img-card1">
-
+                    class="img-card">
 
 
                 <div class="card-body">
 
-                    <h3 class="card-title">
+                    <h4 class="card-title">
                         IVE SECRET
-                    </h3>
+                    </h4>
 
                     <p class="card-descricao">
                         O 4º EP do IVE, IVE SECRET, foi lançado em 25 de agosto de 2025 pela Starship Entertainment.
                         Ele traz 6 faixas, incluindo a música-título “XOXZ”.
                         O conceito explora mistério, identidade oculta e emoções escondidas, com uma estética visual
-                        sóbria,
-                        energética e confiante.
+                        sóbria, energética e confiante.
                     </p>
 
                     <ul class="card-lista">
@@ -231,29 +181,23 @@
             </div>
 
 
-            <!-- Fim IVE Secret -->
-
-
-            <!-- IVE EMPATHY -->
             <div class="album-card reverse-card">
 
                 <img src="img/projetos/musica2.jpg"
                     alt="Seis jovens posam juntas em um ambiente interno com iluminação suave. Elas exibem estilos variados, combinando roupas casuais e modernas, com tons pastéis e urbanos, transmitindo uma atmosfera introspectiva e artística."
-                    class="img-card2">
-
+                    class="img-card">
 
 
                 <div class="card-body">
 
-                    <h3 class="card-title">
+                    <h4 class="card-title">
                         IVE EMPATHY
-                    </h3>
+                    </h4>
 
                     <p class="card-descricao">
                         IVE EMPATHY é o 3º EP do grupo IVE, explorando sentimentos profundos de conexão, compreensão e
                         vulnerabilidade. Com uma sonoridade emocional e elegante, o álbum reflete sobre o poder da
-                        empatia nas
-                        relações humanas.
+                        empatia nas relações humanas.
 
                     </p>
 
@@ -271,33 +215,29 @@
                         <li class="card-item">
                             <i class="bi bi-headphones"></i>
                             Com uma sonoridade sofisticada e envolvente, o grupo revela sua evolução artística e
-                            maturidade em
-                            cada faixa.
+                            maturidade em cada faixa.
                         </li>
                     </ul>
 
                 </div>
-                <!-- FIM IVE EMPATHY -->
-            </div>
+                </div>
 
             <div class="album-card">
 
                 <img src="img/projetos/musica5.jpg"
                     alt="Grupo de sete mulheres posando em um cenário colorido e futurista com tons de verde e roxo, vestindo calças jeans largas com detalhes florais e tops estilosos, transmitindo uma estética moderna e artística."
-                    class="img-card1">
-
+                    class="img-card">
 
 
                 <div class="card-body">
 
-                    <h3 class="card-title">
+                    <h4 class="card-title">
                         IVE SWITCH
-                    </h3>
+                    </h4>
 
                     <p class="card-descricao">
                         O 2º EP IVE SWITCH destaca a versatilidade do grupo, combinando estilos contrastantes que
-                        mostram
-                        diferentes facetas das integrantes, unindo elegância, energia e inovação musical.
+                        mostram diferentes facetas das integrantes, unindo elegância, energia e inovação musical.
 
                     </p>
 
@@ -323,27 +263,22 @@
                     </ul>
 
                 </div>
-                <!-- FIM IVE SWITCH -->
-            </div>
+                </div>
         </div>
 
-
     </section>
-    <!-- Fim Albuns -->
-
-    <!-- sobre -->
-    <section class="sobre" id="sobre">
+    <section class="sobre fade-in" id="sobre">
         <h3 class="text-center"> sobre o grupo </h3>
 
-        <div class="container row">
+        <div class="container row sobre-conteudo">
 
-            <div class="col-lg-4 col-md-4 col6">
+            <div class="col-lg-4 col-md-4 col-12">
                 <img src="img/ive.png"
                     alt="Um adesivo digitalizado com fundo branco, apresentando um monograma estilizado das letras IVE As letras são conectadas e desenhadas em um estilo que as faz parecer fluidas e interligadas, quase como uma única forma. As linhas externas do monograma são delineadas em um tom de violeta azulado muito claro, quase pastel, e o interior das letras possui um gradiente sutil do mesmo tom, dando uma leve impressão de profundidade ou brilho suave. O fundo do adesivo, por trás do contorno branco, é um azul muito claro com um padrão de linhas diagonais entrelaçadas, dando uma textura discreta ao papel de parede."
                     class="sobre-logo">
             </div>
 
-            <div class="col-lg-8  col-md-4 sobre-descricao">
+            <div class="col-lg-8  col-md-8 col-12 sobre-descricao">
                 <p><strong>IVE</strong> é um girl group da 4ª geração do K-pop, formado pela Starship Entertainment e
                     debutado em 1º de dezembro de 2021 com o single "ELEVEN". O nome significa "I Have", representando
                     confiança e identidade forte desde o início.</p>
@@ -368,13 +303,8 @@
 
     </section>
 
-    <!-- contato -->
-    <section class="contato" id="contato">
-        <h3 class="text-center">contato</h3>
-    </section>
+   
 
-
-    <!-- roda pé -->
     <footer>
         <p class=" container-fluid text-center roda-pe">
             &copy;2025
@@ -390,10 +320,6 @@
     </footer>
 
 
-
-
-
-
     <div vw class="enabled">
         <div vw-access-button class="active"></div>
         <div vw-plugin-wrapper>
@@ -406,9 +332,8 @@
     </script>
 
 
-    <!-- bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        integrity="sha384-C6Sg7bIuM5A3y2p5E6d2C/7vV1i7l1K9x2T3J1vA1F9n7k4wA5VvR9tGgL4P1w4B0A3J0c8I8N8L3A3X5I0uC7L"
         crossorigin="anonymous"></script>
 
 
